@@ -1,0 +1,16 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="60" fill="currentColor"/>
+  <defs>
+    <linearGradient id="jira-a" gradientUnits="userSpaceOnUse" x1="88.136" y1="39.092" x2="68.472" y2="59.368">
+      <stop offset=".176" stop-color="#0052cc"/>
+      <stop offset="1" stop-color="#2684ff"/>
+    </linearGradient>
+    <linearGradient id="jira-b" gradientUnits="userSpaceOnUse" x1="66.564" y1="62.256" x2="43.828" y2="84.376">
+      <stop offset=".176" stop-color="#0052cc"/>
+      <stop offset="1" stop-color="#2684ff"/>
+    </linearGradient>
+  </defs>
+  <path d="M216.046 32H123.61c0 23.04 18.648 41.696 41.696 41.696h17v16.452c0 23.04 18.656 41.696 41.696 41.696V39.954A7.96 7.96 0 00216.046 32z" fill="#2684ff"/>
+  <path d="M170.242 78.08H77.804c0 23.038 18.65 41.694 41.688 41.694h17.008v16.452c0 23.04 18.656 41.696 41.696 41.696V86.032a7.966 7.966 0 00-7.954-7.954z" fill="url(#jira-a)"/>
+  <path d="M124.438 124.156H32c0 23.048 18.648 41.696 41.696 41.696h17v16.46c0 23.04 18.656 41.688 41.692 41.688v-89.89a7.968 7.968 0 00-7.95-7.954z" fill="url(#jira-b)"/>
+</svg>

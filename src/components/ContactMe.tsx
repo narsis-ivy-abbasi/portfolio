@@ -1,0 +1,152 @@
+"use client";
+import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
+import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
+import emailjs from "emailjs-com";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import CircularProgress from "@mui/material/CircularProgress";
+
+const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+
+emailjs.init(publicKey);
+
+const ContactMe = () => {
+  const { register, handleSubmit, reset } = useForm();
+  const [isSending, setIsSending] = useState(false);
+
+  const sendEmail = async (data: any) => {
+    setIsSending(true);
+    try {
+      await emailjs.send(serviceId, templateId, data);
+      console.log("SUCCESS!");
+      toast.success("Email sent successfully!");
+      reset();
+    } catch (err) {
+      console.log("FAILED...", err);
+      toast.error("Failed to send email. Please try again.");
+    } finally {
+      setIsSending(false);
+    }
+  };
+
+  return (
+    <Box
+      id="contact"
+      sx={{
+        py: { xs: 10, md: 20 },
+        // border: 1,
+        // borderColor: "lightgreen",
+        my: 5,
+        borderRadius: 10,
+      }}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          gap: 3,
+        }}
+      >
+        {/* 1-Inside Box right */}
+        <Box sx={{ flex: 1 }}>
+          <Typography variant="h3" gutterBottom>
+            Contact Me{" "}
+          </Typography>
+          <Typography variant="body1"  sx={{textAlign:"justify"}} gutterBottom>
+            Interested in working together or have a project in mind? Send me a
+            message through the form below,I’ll be in touch shortly.
+          </Typography>
+          <Box sx={{ mb: 4 }}>
+            <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+              <LocalPhoneOutlinedIcon sx={{ mr: 1 }} />
+              <Typography variant="body1">+98 (912) 433-2264</Typography>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+              <PlaceOutlinedIcon sx={{ mr: 1 }} />
+              <Typography variant="body1">Iran, Tehran</Typography>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+              <EmailOutlinedIcon sx={{ mr: 1 }} />
+              <Typography variant="body1">
+                narsis.ivy.abbasi@gmail.com
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+
+        {/* 2-Inside Box left */}
+        <Box
+          component="form"
+          onSubmit={handleSubmit(sendEmail)}
+          sx={{ display: "flex", flexDirection: "column", gap: 2, flex: 1 }}
+        >
+          <Grid container spacing={2}>
+            <Grid size={{ xs: 6 }}>
+              <TextField
+                fullWidth
+                label="First Name"
+                {...register("firstName")}
+              />
+            </Grid>
+            <Grid size={{ xs: 6 }}>
+              <TextField
+                fullWidth
+                label="Last Name"
+                {...register("lastName")}
+              />
+            </Grid>
+          </Grid>
+
+          <Grid size={{ xs: 6, md: 4, lg: 2 }}>
+            <TextField
+              fullWidth
+              label="Email"
+              type="email"
+              {...register("email")}
+            />
+          </Grid>
+          <Grid size={{ xs: 6, md: 4, lg: 2 }}>
+            <TextField
+              fullWidth
+              multiline
+              rows={4}
+              label="Message"
+              {...register("message")}
+            />
+          </Grid>
+          <Button
+            variant="contained"
+            type="submit"
+            disabled={isSending}
+            sx={{
+              backgroundColor: isSending ? "gray" : "green",
+              "&:hover": { backgroundColor: isSending ? "gray" : "darkgreen" },
+              color: "white",
+              px: 4,
+              py: 1,
+              borderRadius: "8px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {isSending ? (
+              <CircularProgress size={20} sx={{ color: "white", mr: 1 }} />
+            ) : (
+              "Send Message"
+            )}
+          </Button>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default ContactMe;

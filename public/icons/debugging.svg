@@ -1,0 +1,20 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="60" fill="#4A90E2"/>
+  <g fill="#fff">
+    <!-- Code symbol -->
+    <path d="M90 96l-20 32 20 32" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M166 96l20 32-20 32" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    
+    <!-- Bug body -->
+    <circle cx="128" cy="128" r="24" fill="#ffffff"/>
+    
+    <!-- Bug antenna -->
+    <path d="M116 100l-10-14M140 100l10-14" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Improved curved bug legs -->
+    <path d="M104 116c-8-4-14-6-10-2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M104 140c-8 4-14 6-10 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M152 116c8-4 14-6 10-2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M152 140c8 4 14 6 10 2" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
