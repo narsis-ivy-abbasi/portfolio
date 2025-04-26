@@ -9,7 +9,6 @@ import { Box } from "@mui/material";
 
 export default function Home() {
   return (
-    // {xs:"column-reverse",md:"row"}
     <Box
       sx={{
         display: "flex",
@@ -19,7 +18,7 @@ export default function Home() {
       }}
     >
       <Header />
-      <Box component="main" sx={{ flexGrow: 1, py: 4, minWidth: "500" }}>
+      <Box component="main" sx={{ flexGrow: 1, py: 4, minWidth: 500,maxWidth:{ xs: 400, md: 800,lg:1500 },marginX:"auto" }}>
         <AboutMe />
         <WorkSample />
         <WorkTimeline />

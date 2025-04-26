@@ -6,8 +6,8 @@ import Skills from "./Skills";
 const skillsInfo = [
   { name: "HTML5", icon: "/icons/html5.svg" },
   { name: "CSS3", icon: "/icons/css3.svg" },
-  { name: "JavaScript", icon: "/icons/javascript.svg" },
-  { name: "TypeScript", icon: "/icons/typescript.svg" },
+  { name: "JS", icon: "/icons/javascript.svg" },
+  { name: "TS", icon: "/icons/typescript.svg" },
   { name: "React", icon: "/icons/react.svg" },
   { name: "Next.js", icon: "/icons/nextJs.svg" },
   { name: "Redux", icon: "/icons/redux.svg" },
@@ -19,7 +19,6 @@ const skillsInfo = [
   { name: "Figma", icon: "/icons/figma.svg" },
   { name: "SASS", icon: "/icons/sass.svg" },
   { name: "UI/UX", icon: "/icons/ui.svg" },
-  // { name: "Responsive", icon: "/icons/responsive.svg" },
   { name: "Debugging", icon: "/icons/debugging.svg" },
   { name: "Jira", icon: "/icons/jira.svg" },
   { name: "Git", icon: "/icons/git.svg" },
@@ -32,9 +31,6 @@ const AboutMe = () => {
       sx={{
         py: { xs: 0, md: 10 },
         my: 5,
-        borderRadius: 10,
-        //  border: 1,
-        // borderColor: "lightgreen",
       }}
     >
       <Box
@@ -57,7 +53,7 @@ const AboutMe = () => {
           <Typography variant="h6" color="textSecondary" sx={{ pb: 1 / 2 }}>
             Frontend Developer
           </Typography>
-          <Typography sx={{ textAlign: "justify" }}>
+          <Typography sx={{ textAlign: "justify", paddingBottom: 5 }}>
             Dynamic Front-End Developer with over 9 years of experience in
             building responsive and user-friendly web applications. Proficient
             in HTML, CSS, JavaScript, and modern libraries like React, as well
@@ -73,28 +69,49 @@ const AboutMe = () => {
             flex: 1,
             position: "relative",
             minHeight: { xs: 400, md: 500 },
-            width: "100%",
+            width: { xs: "100%", md: "fit-content" },
             maxWidth: 400,
+            mx: "auto",
           }}
         >
-          {/* SVG BACKGROUND */}
           <Box
             component="svg"
             viewBox="0 0 500 500"
             xmlns="http://www.w3.org/2000/svg"
             sx={{
-              width: 400,
-              height: 400,
+              width: 450,
+              height: 450,
               position: "absolute",
-              right: { xs: 70, md: 10, lg: 70 },
-              top: "50%",
-              transform: "translateY(-50%)",
-              zIndex: 1,
+              left: "65%", // Center horizontally
+              top: "55%", // Center vertically
+              transform: "translate(-50%, -50%)", // Perfect centering
+              zIndex: 0,
+              opacity: 0.3,
             }}
           >
             <path
-              fill="#fdd835"
-              d="M439,307Q381,364,307,422Q233,480,149,432Q65,384,88,292.5Q111,201,161.5,133.5Q212,66,289.5,92Q367,118,429.5,184Q492,250,439,307Z"
+              fill="#6ec6ff"
+              d="M150,200Q130,150,190,130Q220,70,290,100Q360,90,380,150Q440,170,430,230Q450,290,400,320Q370,380,300,360Q260,400,200,370Q150,350,130,300Q90,270,120,230Q150,200,150,200Z"
+            />
+          </Box>
+          <Box
+            component="svg"
+            viewBox="0 0 500 500"
+            xmlns="http://www.w3.org/2000/svg"
+            sx={{
+              width: 450,
+              height: 450,
+              position: "absolute",
+              left: "45%", // Center horizontally
+              top: "65%", // Center vertically
+              transform: "translate(-50%, -50%)", // Perfect centering
+              zIndex: 0,
+              opacity: 0.3,
+            }}
+          >
+            <path
+              fill="#ffc0cb"
+              d="M150,200Q130,150,190,130Q220,70,290,100Q360,90,380,150Q440,170,430,230Q450,290,400,320Q370,380,300,360Q260,400,200,370Q150,350,130,300Q90,270,120,230Q150,200,150,200Z"
             />
           </Box>
 
@@ -102,8 +119,8 @@ const AboutMe = () => {
           <Box
             sx={{
               position: "absolute",
-              right: { xs: 60, md: 10, lg: 60 },
-              top: "50%",
+              top: "25%",
+              left: "25%",
               transform: "translateY(-50%)",
               width: 250,
               height: 250,
@@ -134,14 +151,21 @@ const AboutMe = () => {
             ))}
           </Box>
 
-          {/* FIXED IMAGE (Not Rotating) */}
+          {/* FIXED IMAGE */}
           <Box
             sx={{
               position: "absolute",
-              right: { xs: 60, md: 10, lg: 60 },
-              bottom: 0,
-              height: 400,
+              right: 60,
+              bottom: { xs: "9%", md: "8%", lg: "16%" },
+              height: 396,
               zIndex: 3,
+              transition: "transform 0.4s ease",
+              transformOrigin: "bottom center",
+              borderBottom:"1px solid #ffc0cb",
+              "&:hover": {
+                transform: "scale(1.1)",
+                filter: "brightness(1.1)",
+              },
             }}
           >
             <Image

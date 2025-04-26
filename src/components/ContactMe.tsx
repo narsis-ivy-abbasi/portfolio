@@ -4,12 +4,16 @@ import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
 import emailjs from "emailjs-com";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CircularProgress from "@mui/material/CircularProgress";
+import Image from "next/image";
 
 const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
@@ -41,10 +45,7 @@ const ContactMe = () => {
       id="contact"
       sx={{
         py: { xs: 10, md: 20 },
-        // border: 1,
-        // borderColor: "lightgreen",
         my: 5,
-        borderRadius: 10,
       }}
     >
       <Box
@@ -57,9 +58,13 @@ const ContactMe = () => {
         {/* 1-Inside Box right */}
         <Box sx={{ flex: 1 }}>
           <Typography variant="h3" gutterBottom>
-            Contact Me{" "}
+            Contact Me
           </Typography>
-          <Typography variant="body1"  sx={{textAlign:"justify"}} gutterBottom>
+          <Typography
+            variant="body1"
+            sx={{ textAlign: "justify" }}
+            gutterBottom
+          >
             Interested in working together or have a project in mind? Send me a
             message through the form below,I’ll be in touch shortly.
           </Typography>
@@ -77,6 +82,59 @@ const ContactMe = () => {
               <Typography variant="body1">
                 narsis.ivy.abbasi@gmail.com
               </Typography>
+            </Box>
+          </Box>
+
+          <Box
+            sx={{ display: "flex", gap: 2, mt: 2, justifyContent: "flex-end" }}
+          >
+            <Box
+              component="a"
+              href="www.linkedin.com/in/narsis-abbasi"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                color: "#4FC3F7",
+                transition: "transform 0.3s ease, filter 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.2)",
+                  filter: "brightness(1.4)",
+                },
+              }}
+            >
+              <LinkedInIcon fontSize="large" />
+            </Box>
+            <Box
+              component="a"
+              href="https://github.com/narsis-ivy-abbasi"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                color: "#4FC3F7",
+                transition: "transform 0.3s ease, filter 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.2)",
+                  filter: "brightness(1.4)",
+                },
+              }}
+            >
+              <GitHubIcon fontSize="large" />
+            </Box>
+            <Box
+              component="a"
+              href="https://dribbble.com/narsis_ivy_abbasi"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                color: "#4FC3F7",
+                transition: "transform 0.3s ease, filter 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.2)",
+                  filter: "brightness(1.4)",
+                },
+              }}
+            >
+              <SportsBasketballIcon fontSize="large" />
             </Box>
           </Box>
         </Box>
@@ -126,8 +184,8 @@ const ContactMe = () => {
             type="submit"
             disabled={isSending}
             sx={{
-              backgroundColor: isSending ? "gray" : "green",
-              "&:hover": { backgroundColor: isSending ? "gray" : "darkgreen" },
+              backgroundColor: isSending ? "gray" : "#4FC3F7",
+              "&:hover": { backgroundColor: isSending ? "gray" : "#29B6F6" },
               color: "white",
               px: 4,
               py: 1,

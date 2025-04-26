@@ -1,12 +1,15 @@
-import {
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
+"use client";
+import { useTheme } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardHeader from "@mui/material/CardHeader";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { red } from "@mui/material/colors";
 import Skills from "./Skills";
-
 interface skill {
   name?: string;
   icon: string;
@@ -16,47 +19,57 @@ interface WorkCardProps {
   title: string;
   description: string;
   img: string;
-  url: string;
+  srcUrl: string;
+  demoUrl: string;
   skillsInfo: skill[];
 }
-
 const WorkCard = ({
   title,
   description,
   img,
-  url,
+  srcUrl,
+  demoUrl,
   skillsInfo,
 }: WorkCardProps) => {
+  const theme = useTheme();
   return (
     <Card
-      component="a"
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
       sx={{
-        width: 350,
-        textDecoration: "none",
-        color: "inherit",
-        transition: "transform 0.2s ease-in-out",
-        "&:hover": {
-          transform: "scale(1.02)",
-        },
+        maxWidth: 345,
+        mb: 1,
+        border: 1,
+        borderColor: theme.palette.mode === "dark" ? "black" : "#f5f5f5",
+        backgroundColor: theme.palette.mode === "dark" ? "inherit" : "#f5f5f5",
       }}
     >
-      <CardMedia component="img" alt="workSample" height="200" image={img} />
+      <CardHeader
+        avatar={
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+            N
+          </Avatar>
+        }
+        title={title}
+        subheader="September 14, 2016"
+      />
+      <CardMedia component="img" height="194" image={img} alt="work sample" />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {title}
-        </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
           {description}
         </Typography>
       </CardContent>
-      <CardActions sx={{ px: 5, gap: 4 }}>
-        <Skills skillsInfo={skillsInfo} iconSize={40} />
+      <CardActions>
+        <Skills skillsInfo={skillsInfo} iconSize={30} />
+      </CardActions>
+
+      <CardActions>
+        <Button size="small" component="a" href={srcUrl} target="_blank">
+          Source
+        </Button>
+        <Button size="small" component="a" href={demoUrl} target="_blank">
+          Demo
+        </Button>
       </CardActions>
     </Card>
   );
 };
-
 export default WorkCard;

@@ -20,7 +20,19 @@ const Header = () => {
 
   return (
     <Box component="header" sx={{ py: 4 }}>
-      <AppBar component="nav">
+      <AppBar
+        component="nav"
+        sx={(theme) => ({
+          backgroundColor:
+            theme.palette.mode === "light"
+              ? "rgba(255, 255, 255, 0.7)"
+              : theme.palette.background.default,
+          backdropFilter:
+            theme.palette.mode === "light" ? "blur(10px)" : "none",
+          boxShadow: "0 4px 6px rgba(0,0,0,0.05)",
+          color: "inherit",
+        })}
+      >
         <Toolbar>
           <Box
             sx={{

@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Grid from "@mui/material/Grid";
 import { Box, Typography } from "@mui/material";
 
 interface skill {
@@ -15,43 +14,54 @@ interface skillProps {
 
 const Skills = ({ skillsInfo, iconSize }: skillProps) => {
   return (
-    <Box sx={{ flexGrow: 1, py: 4 }}>
-      <Grid container spacing={{ xs: 2, md: 3, lg: 4 }}>
-        {skillsInfo.map((skill, index) => (
-          <Grid size={{ xs: 3, md: 4, lg: 2 }} key={index}>
-            <Box
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: 1,
+        alignItems: "center",
+      }}
+    >
+      {skillsInfo.map((skill, index) => (
+        <Box
+          key={index}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+            width: iconSize + 10,
+            transition: "transform 0.3s ease",  
+            "&:hover img": {
+              transform: "translateY(-5px)",  
+              filter: "brightness(1.5)",
+            },
+          }}
+        >
+          <Box
+            component="img"
+            src={skill.icon}
+            alt={skill.name ?? "Skill Icon"}
+            sx={{
+              width: iconSize,
+              height: iconSize,transition: "transform 0.3s ease",
+            }}
+          />
+          {skill.name && (
+            <Typography
               sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
+                fontSize: {
+                  xs: "0.75rem",
+                  md: "1rem",
+                },
+                fontWeight: "500",
               }}
             >
-              <Box
-                component="img"
-                src={skill.icon}
-                alt={skill.name ?? "Skill Icon"}
-                sx={{
-                  width: { xs: iconSize - 10, md: iconSize - 5, lg: iconSize },
-                  height: iconSize,
-                  marginBottom: 1,
-                }}
-              />
-              <Typography
-                sx={{
-                  fontSize: {
-                    xs: "0.75rem", // mobile
-                    md: "1rem" 
-                  },
-                  fontWeight: "500", // optional: mimic subtitle1
-                }}
-              >
-                {skill.name ?? ""}
-              </Typography>
-            </Box>
-          </Grid>
-        ))}
-      </Grid>
+              {skill.name}
+            </Typography>
+          )}
+        </Box>
+      ))}
     </Box>
   );
 };

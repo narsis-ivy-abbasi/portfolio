@@ -6,54 +6,53 @@ import WorkTimeLineItem from "./WorkTimeLineItem";
 const WorkTimeline = () => {
   const historyWork = [
     {
-      time: "05/2024-Current",
-      companyName: "Remote",
+      time: "May 2024 - Current",
+      companyName: "Self-employed(Remote)",
       jobTitle: "Front-end Developer",
       details: [
-        "Independently designed and developed responsive websites using HTML, CSS, JavaScript, and React",
+        "Independently designed and developed responsive websites using HTML, CSS, JavaScript, and React with TypeScript, incorporating Redux for state management",
         "Built user-friendly interfaces focused on performance, accessibility, and clean UI/UX",
         "Gained hands-on experience managing the full development cycle from planning to deployment",
       ],
     },
     {
-      time: "08/2018-07/2024",
+      time: "Aug 2018 - Jul 2024",
       companyName: "Soubar engineering Company",
       jobTitle: "Front-end Developer",
       details: [
-        "Led the front-end development alongside one other front-end developer within a 5-member software team, successfully deploying a stable product over 5 years and achieving a final quality rating of 95%",
-        "Created a user-friendly front-end interface utilizing HTML5,CSS3, and enhanced UI/UX design principle",
-        "Collaborated with UX/UI designers to create interactive prototypes, improving user experience by 30",
-        "Implemented responsive designs using Bootstrap and CSS Flex-box, ensuring compatibility across mobile and desktop device",
-        "Developed reusable components with React,resulting in a 20% increase-in development efficiency",
-        "Conducted code reviews and maintained documentation to ensure adherence to best practices",
+        "Played a key role in front-end development within a 5-member team, delivering a stable product over 5 years with a 95% quality rating.",
+        "Built responsive, accessible UIs using HTML5, CSS3, Bootstrap, React, and TypeScript, improving development efficiency by 20%.",
+        "Collaborated on UX/UI design and code reviews, enhancing user experience by 30% and ensuring best practice adherence.",
       ],
     },
     {
-      time: "06/2017-02/2018",
-      companyName: "Middle East Bank",
+      time: "Jun 2017 – Feb 2018",
+      companyName: "Dotin Core Banking Co",
       jobTitle: "Junior Front-end Developer",
       details: [
-        "Collaborated within a cross-functional team of 14 members, including developers, analysts, a tech lead,and a project manager, to deliver high- quality software solution",
-        " Developed a core banking application, enhancing financial transaction processing and improving overall system performance",
-        "Utilized Hibernate for seamless database connectivity, optimizing data management and retrieval processes",
+        "Contributed to the development of a core banking application using Spring Framework and Hibernate, improving performance and streamlining data management.",
+        "Designed and implemented key features such as CRUD operations and bill registration tasks, enhancing operational workflows.",
+        "Collaborated in a 14-member Agile team using Jira, ensuring efficient project delivery through strong cross-functional coordination.",
       ],
     },
     {
-      time: "04/2014-07/2016",
-      companyName: "Dotin",
+      time: "Apr 2014 – Jul 2016",
+      companyName: "Middle East Bank",
       jobTitle: "Developer",
       details: [
-        "Developed over 350 PL/SQLcode blocks to create and enhance banking applications, improving system functionality and performance",
-        "Initiated and implemented more than 150 complex procedures and functions, contributing to streamlined operations and efficient data processing",
+        "Developed and maintained over 350 PL/SQL code blocks, procedures, and triggers to enhance banking systems and ensure efficient data processing.",
+        "Improved application reliability and integration by debugging Java programs and implementing XML-based data communication interfaces.",
+        "Conducted end-to-end testing, UI enhancements, and bug resolution using tools like Firebug, delivering high-quality, stable banking applications.",
       ],
     },
     {
-      time: "01/2009-03/2013",
+      time: "Jan 2009 – Mar 2013",
       companyName: "Soubar engineering Company",
       jobTitle: "Developer",
       details: [
-        "Gained comprehensive knowledge in software development, testing concepts, and technical writing, contributing to overall project success and resulting in a 20% decrease in software bugs and a 15% improvement in project delivery timeline",
-        "Developed and deployed multiple desktop applications, improving operational efficiency and user experience",
+        "Developed and deployed desktop applications with a focus on operational efficiency and enhanced user experience using JavaScript and UI/UX best practices.",
+        "Designed and implemented a remote printer control app, improving accessibility and functionality through intuitive interfaces and clean UI design.",
+        "Applied software testing principles and technical writing to reduce bugs by 30% and improve delivery timelines, contributing to overall project success.",
       ],
     },
   ];
@@ -62,10 +61,7 @@ const WorkTimeline = () => {
       id="history"
       sx={{
         py: { xs: 10, md: 20 },
-        // border: 1,
-        // borderColor: "red",
         my: 5,
-        borderRadius: 10,
       }}
     >
       <Typography variant="h3">WorkTimeline </Typography>
@@ -80,6 +76,7 @@ const WorkTimeline = () => {
             jobTitle={histWork.jobTitle}
             details={histWork.details}
             key={index}
+            index={index}
           />
         ))}
       </Timeline>
