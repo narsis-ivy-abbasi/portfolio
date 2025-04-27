@@ -60,25 +60,48 @@ const ContactMe = () => {
           <Typography variant="h3" gutterBottom>
             Contact Me
           </Typography>
-          <Typography
-            variant="body1"
-            sx={{ textAlign: "justify" }}
-            gutterBottom
-          >
+          <Typography variant="body1" sx={{ textAlign: "justify", mb: 2 }}>
             Interested in working together or have a project in mind? Send me a
             message through the form below,I’ll be in touch shortly.
           </Typography>
-          <Box sx={{ mb: 4 }}>
+          <Box sx={{ mb: 2 }}>
             <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-              <LocalPhoneOutlinedIcon sx={{ mr: 1 }} />
+              <LocalPhoneOutlinedIcon
+                sx={{
+                  mr: 1,
+                  transition: "transform 0.3s ease, filter 0.3s ease",
+                  "&:hover": {
+                    transform: "scale(1.2)",
+                    filter: "brightness(1.4)",
+                  },
+                }}
+              />
               <Typography variant="body1">+98 (912) 433-2264</Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-              <PlaceOutlinedIcon sx={{ mr: 1 }} />
+              <PlaceOutlinedIcon
+                sx={{
+                  mr: 1,
+                  transition: "transform 0.3s ease, filter 0.3s ease",
+                  "&:hover": {
+                    transform: "scale(1.2)",
+                    filter: "brightness(1.4)",
+                  },
+                }}
+              />
               <Typography variant="body1">Iran, Tehran</Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-              <EmailOutlinedIcon sx={{ mr: 1 }} />
+              <EmailOutlinedIcon
+                sx={{
+                  mr: 1,
+                  transition: "transform 0.3s ease, filter 0.3s ease",
+                  "&:hover": {
+                    transform: "scale(1.2)",
+                    filter: "brightness(1.4)",
+                  },
+                }}
+              />
               <Typography variant="body1">
                 narsis.ivy.abbasi@gmail.com
               </Typography>

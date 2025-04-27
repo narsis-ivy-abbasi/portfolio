@@ -62,8 +62,8 @@ const WorkTimeLineItem = ({
             sx={{
               p: 2,
               borderRadius: 2,
-              backgroundColor:
-                theme.palette.mode === "dark" ? "inherit" : "#f5f5f5",
+              // backgroundColor:
+              //   theme.palette.mode === "dark" ? "inherit" : "#f5f5f5",
               maxWidth: "90%",
               textAlign: "left",
               transition: "transform 0.3s ease",

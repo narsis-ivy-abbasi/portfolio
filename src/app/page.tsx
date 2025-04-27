@@ -6,6 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import WorkSample from "@/components/WorkSample";
 import WorkTimeline from "@/components/WorkTimeline";
 import { Box } from "@mui/material";
+import "./globals.css"
 
 export default function Home() {
   return (

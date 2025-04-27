@@ -68,8 +68,8 @@ const workInfo = [
 const WorkSample = () => {
   return (
     <Box id="samples" sx={{ py: { xs: 10, md: 20 }, my: 5}}>
-      <Typography variant="h3">WorkSample</Typography>
-      <Typography variant="body1" sx={{ py: 4 }}>
+      <Typography variant="h3"  gutterBottom>WorkSample</Typography>
+      <Typography variant="body1"  gutterBottom>
         A selection of recent projects is displayed in the section below. Click
         on any card to explore the work and see it in action.
       </Typography>

@@ -20,6 +20,9 @@ export const ThemeRegistry = ({ children }: { children: ReactNode }) => {
       createTheme({
         palette: {
           mode,
+          background: {
+            default: mode === "light" ? "#F7F8FA" : "black", 
+          },
         },
       }),
     [mode]

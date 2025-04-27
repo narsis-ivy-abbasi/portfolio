@@ -38,8 +38,8 @@ const WorkCard = ({
         maxWidth: 345,
         mb: 1,
         border: 1,
-        borderColor: theme.palette.mode === "dark" ? "black" : "#f5f5f5",
-        backgroundColor: theme.palette.mode === "dark" ? "inherit" : "#f5f5f5",
+        borderColor: theme.palette.mode === "dark" ? "black" : "white",
+        // backgroundColor: theme.palette.mode === "dark" ? "inherit" : "white",
       }}
     >
       <CardHeader
