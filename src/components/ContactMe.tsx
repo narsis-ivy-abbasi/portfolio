@@ -29,10 +29,15 @@ const ContactMe = () => {
   const { register, handleSubmit, reset } = useForm<FormData>();
   const [isSending, setIsSending] = useState(false);
 
-  const sendEmail = async (data: any) => {
+  const sendEmail = async (data: FormData) => {
     setIsSending(true);
     try {
-      await emailjs.send(serviceId, templateId, data);
+      await emailjs.send(serviceId, templateId, {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        message: data.message,
+      });
       console.log("SUCCESS!");
       toast.success("Email sent successfully!");
       reset();
