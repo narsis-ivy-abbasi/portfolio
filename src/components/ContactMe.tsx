@@ -19,9 +19,14 @@ const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
 const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
 
 emailjs.init(publicKey);
-
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  message: string;
+}
 const ContactMe = () => {
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm<FormData>();
   const [isSending, setIsSending] = useState(false);
 
   const sendEmail = async (data: any) => {
