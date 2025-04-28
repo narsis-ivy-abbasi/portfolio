@@ -1,3 +1,36 @@
+💼 Personal Portfolio Website
+This is my personal portfolio website built with Next.js, TypeScript, and Material-UI.
+It showcases my skills, projects, and contact information in a modern, responsive design.
+
+✨ Features:
+Fully responsive layout for all devices
+
+Contact form integrated with EmailJS for sending messages directly to my inbox
+
+Smooth animations and hover effects
+
+Clean, accessible code structure using React Hook Form for validation
+
+Hosted and deployed on Netlify
+
+🛠️ Tech Stack:
+Next.js 15
+
+React 18
+
+TypeScript
+
+Material-UI (MUI)
+
+EmailJS
+
+React Hook Form
+
+Toastify (for notifications)
+
+📬 Contact Section:
+Visitors can easily send me a message through the contact form, with real-time feedback (loading spinner, success/error toasts).
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
