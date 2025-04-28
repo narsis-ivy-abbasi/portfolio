@@ -3,6 +3,8 @@ import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import TerrainIcon from "@mui/icons-material/Terrain";
 import ThunderstormIcon from "@mui/icons-material/Thunderstorm";
+import TrackChangesIcon from "@mui/icons-material/TrackChanges";
+import CalculateIcon from "@mui/icons-material/Calculate";
 import { Box, Typography } from "@mui/material";
 import Carousel from "./Carousel";
 import WorkCard from "./WorkCard";
@@ -37,6 +39,22 @@ const workInfo = [
     ],
     releaseDate: "March, 2025",
     icon: <ShoppingBagIcon fontSize="small" />,
+  },
+  {
+    title: "Habit Tracker Dashboard",
+    description:
+      "A website for tracking habits and following personal plans to build better routines.",
+    img: "/workSample/mock-habit-tracker.png",
+    srcUrl: "https://github.com/narsis-ivy-abbasi/dashboard",
+    demoUrl: "https://habit-tracker-dashboard.netlify.app/",
+    skillsInfo: [
+      { name: "", icon: "/icons/nextJs.svg" },
+      { name: "", icon: "/icons/materialUI.svg" },
+      { name: "", icon: "/icons/react.svg" },
+      { name: "", icon: "/icons/redux.svg" },
+    ],
+    releaseDate: "March, 2025",
+    icon: <TrackChangesIcon fontSize="small" />,
   },
   {
     title: "Social Traveler",
@@ -79,6 +97,22 @@ const workInfo = [
     ],
     releaseDate: "December, 2024",
     icon: <TerrainIcon fontSize="small" />,
+  },
+  {
+    title: "Math",
+    description:
+      "A bilingual website with dark and light modes, connecting students to a private math teacher.",
+    img: "/workSample/mock-math.png",
+    srcUrl: "https://github.com/narsis-ivy-abbasi/math",
+    demoUrl: "https://math-zi-website.netlify.app/",
+    skillsInfo: [
+      { name: "", icon: "/icons/nextJs.svg" },
+      { name: "", icon: "/icons/materialUI.svg" },
+      { name: "", icon: "/icons/react.svg" },
+      { name: "", icon: "/icons/redux.svg" },
+    ],
+    releaseDate: "December, 2024",
+    icon: <CalculateIcon fontSize="small" />,
   },
 ];
 

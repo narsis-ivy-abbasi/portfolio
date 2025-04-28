@@ -2,6 +2,7 @@
 
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
+import DownloadIcon from "@mui/icons-material/Download";
 import {
   AppBar,
   Box,
@@ -57,6 +58,12 @@ const Header = () => {
           </Box>
 
           <NavItems />
+          {/* Download CV button */}
+          <a href="/cv/NargesAbbasi.pdf" download style={{ textDecoration: "none" }} title="Download C">
+            <IconButton sx={{color: theme.palette.mode === "dark"? "white" :"black"}}>
+              <DownloadIcon />
+            </IconButton>
+          </a>
 
           <IconButton onClick={colorMode.toggleColorMode} color="inherit">
             {theme.palette.mode === "dark" ? (
