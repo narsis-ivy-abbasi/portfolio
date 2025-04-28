@@ -2,18 +2,17 @@
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
-import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
+import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
+import CircularProgress from "@mui/material/CircularProgress";
 import emailjs from "emailjs-com";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import CircularProgress from "@mui/material/CircularProgress";
-import Image from "next/image";
 
 const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;

@@ -1,75 +1,94 @@
+import ExploreIcon from "@mui/icons-material/Explore";
+import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import TerrainIcon from "@mui/icons-material/Terrain";
+import ThunderstormIcon from "@mui/icons-material/Thunderstorm";
 import { Box, Typography } from "@mui/material";
-import WorkCard from "./WorkCard";
 import Carousel from "./Carousel";
+import WorkCard from "./WorkCard";
 
 const workInfo = [
   {
-    title: "Trip",
-    description:
-      "This is a site related to tripThis is a tripThis is a site related to trip",
+    title: "Trip Reservation",
+    description: "A website for booking hotels and exploring vacation tours.",
     img: "/workSample/mock-trip.png",
-    srcUrl: "https://amazing-marzipan-4800f9.netlify.app/",
+    srcUrl: "https://github.com/narsis-ivy-abbasi/trip-reservation",
     demoUrl: "https://amazing-marzipan-4800f9.netlify.app/",
+    skillsInfo: [
+      { name: "", icon: "/icons/typescript.svg" },
+      { name: "", icon: "/icons/react.svg" },
+      { name: "", icon: "/icons/nextJs.svg" },
+      { name: "", icon: "/icons/materialUI.svg" },
+    ],
+    releaseDate: "February, 2025",
+    icon: <FlightTakeoffIcon fontSize="small" />,
+  },
+  {
+    title: "Shopify",
+    description: "A website for online shopping and purchasing products.",
+    img: "/workSample/mock-shopify.png",
+    srcUrl: "https://github.com/narsis-ivy-abbasi/shopify",
+    demoUrl: "https://ivyshopify.netlify.app/",
+    skillsInfo: [
+      { name: "", icon: "/icons/typescript.svg" },
+      { name: "", icon: "/icons/react.svg" },
+      { name: "", icon: "/icons/redux.svg" },
+      { name: "", icon: "/icons/tailwind.svg" },
+    ],
+    releaseDate: "March, 2025",
+    icon: <ShoppingBagIcon fontSize="small" />,
+  },
+  {
+    title: "Social Traveler",
+    description:
+      "A website for connecting travelers and sharing travel experiences.",
+    img: "/workSample/mock-SocialTraveler.png",
+    srcUrl: "https://github.com/narsis-ivy-abbasi/BootEx01",
+    demoUrl: "https://gorgeous-monstera-860f43.netlify.app/",
     skillsInfo: [
       { name: "", icon: "/icons/html5.svg" },
       { name: "", icon: "/icons/css3.svg" },
       { name: "", icon: "/icons/javascript.svg" },
-    ],
-  },
-  {
-    title: "Shopify",
-    description:
-      "This is a site related to ShopifyThis is a site related to Shopify",
-    img: "/workSample/mock-shopify.png",
-    srcUrl: "https://amazing-marzipan-4800f9.netlify.app/",
-    demoUrl: "https://ivyshopify.netlify.app/",
-    skillsInfo: [
-      { name: "", icon: "/icons/javascript.svg" },
       { name: "", icon: "/icons/bootstrap.svg" },
     ],
+    releaseDate: "November, 2024",
+    icon: <ExploreIcon fontSize="small" />,
+  },
+  {
+    title: "Weather App",
+    description: "Live weather updates and forecasts from real-time API data.",
+    img: "/workSample/mock-weather.png",
+    srcUrl: "https://github.com/narsis-ivy-abbasi/weatherApp",
+    demoUrl: "https://aesthetic-brigadeiros-16057f.netlify.app/",
+    skillsInfo: [
+      { name: "", icon: "/icons/react.svg" },
+      { name: "", icon: "/icons/tailwind.svg" },
+    ],
+    releaseDate: "October, 2024",
+    icon: <ThunderstormIcon fontSize="small" />,
   },
   {
     title: "Advanture",
-    description:
-      "This is a site related to Bio,This is a site related to is a site related",
+    description: "A site to plan and organize adventure trips and activities",
     img: "/workSample/mock-advanture.png",
-    srcUrl: "https://amazing-marzipan-4800f9.netlify.app/",
+    srcUrl: "https://github.com/narsis-ivy-abbasi/tailwindPractice",
     demoUrl: "https://amazing-marzipan-4800f9.netlify.app/",
     skillsInfo: [
-      { name: "", icon: "/icons/css3.svg" },
-      { name: "", icon: "/icons/javascript.svg" },
-      { name: "", icon: "/icons/jquery.svg" },
+      { name: "", icon: "/icons/html5.svg" },
+      { name: "", icon: "/icons/tailwind.svg" },
     ],
-  },
-  {
-    title: "aaa",
-    description:
-      "This is a site related to Bio,This is a site related to is a site related",
-    img: "/workSample/mock-advanture.png",
-    srcUrl: "https://amazing-marzipan-4800f9.netlify.app/",
-    demoUrl: "https://amazing-marzipan-4800f9.netlify.app/",
-    skillsInfo: [{ name: "", icon: "/icons/css3.svg" }],
-  },
-  {
-    title: "ccc",
-    description:
-      "This is a site related to Bio,This is a site related to is a site related",
-    img: "/workSample/mock-advanture.png",
-    srcUrl: "https://amazing-marzipan-4800f9.netlify.app/",
-    demoUrl: "https://amazing-marzipan-4800f9.netlify.app/",
-    skillsInfo: [
-      { name: "", icon: "/icons/css3.svg" },
-      { name: "", icon: "/icons/javascript.svg" },
-      { name: "", icon: "/icons/jquery.svg" },
-    ],
+    releaseDate: "December, 2024",
+    icon: <TerrainIcon fontSize="small" />,
   },
 ];
 
 const WorkSample = () => {
   return (
-    <Box id="samples" sx={{ py: { xs: 10, md: 20 }, my: 5}}>
-      <Typography variant="h3"  gutterBottom>WorkSample</Typography>
-      <Typography variant="body1"  gutterBottom>
+    <Box id="samples" sx={{ py: { xs: 10, md: 20 }, my: 5 }}>
+      <Typography variant="h3" gutterBottom>
+        WorkSample
+      </Typography>
+      <Typography variant="body1" gutterBottom sx={{ mb: 2 }}>
         A selection of recent projects is displayed in the section below. Click
         on any card to explore the work and see it in action.
       </Typography>
@@ -80,9 +99,11 @@ const WorkSample = () => {
             title={work.title}
             description={work.description}
             img={work.img}
-            srcUrl={work.demoUrl}
+            srcUrl={work.srcUrl}
             demoUrl={work.demoUrl}
             skillsInfo={work.skillsInfo}
+            releaseDate={work.releaseDate}
+            icon={work.icon}
           />
         ))}
       </Carousel>

@@ -11,6 +11,7 @@ const skillsInfo = [
   { name: "React", icon: "/icons/react.svg" },
   { name: "Next.js", icon: "/icons/nextJs.svg" },
   { name: "Redux", icon: "/icons/redux.svg" },
+  { name: "MUI", icon: "/icons/materialUI.svg" },
   { name: "Tailwind", icon: "/icons/tailwind.svg" },
   { name: "PHP", icon: "/icons/php.svg" },
   { name: "SQL", icon: "/icons/mySql.svg" },

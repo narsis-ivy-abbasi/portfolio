@@ -10,9 +10,9 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import Image from "next/image";
 import { useColorMode } from "../app/context/ThemeContext";
 import NavItems from "./NavItems";
-import Image from "next/image";
 
 const Header = () => {
   const theme = useTheme();

@@ -64,8 +64,10 @@ const WorkTimeline = () => {
         my: 5,
       }}
     >
-      <Typography variant="h3"  gutterBottom>WorkTimeline </Typography>
-      <Typography variant="body1"  gutterBottom>
+      <Typography variant="h3" gutterBottom>
+        WorkTimeline
+      </Typography>
+      <Typography variant="body1" gutterBottom>
         Here’s a brief timeline of my professional journey, highlighting the
         companies I’ve worked with and the roles I’ve taken on throughout the
         years.

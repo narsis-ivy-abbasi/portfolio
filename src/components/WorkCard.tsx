@@ -1,5 +1,5 @@
 "use client";
-import { useTheme } from "@mui/material";
+import DefaultIcon from "@mui/icons-material/Person";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -8,8 +8,8 @@ import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
 import Skills from "./Skills";
+
 interface skill {
   name?: string;
   icon: string;
@@ -22,6 +22,8 @@ interface WorkCardProps {
   srcUrl: string;
   demoUrl: string;
   skillsInfo: skill[];
+  releaseDate: string;
+  icon?: React.ReactNode;
 }
 const WorkCard = ({
   title,
@@ -30,28 +32,40 @@ const WorkCard = ({
   srcUrl,
   demoUrl,
   skillsInfo,
+  releaseDate,
+  icon,
 }: WorkCardProps) => {
-  const theme = useTheme();
   return (
     <Card
       sx={{
         maxWidth: 345,
         mb: 1,
-        border: 1,
-        borderColor: theme.palette.mode === "dark" ? "black" : "white",
-        // backgroundColor: theme.palette.mode === "dark" ? "inherit" : "white",
       }}
     >
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            N
+          <Avatar
+            sx={{ bgcolor: "#4FC3F7", color: "white" }}
+            aria-label="recipe"
+          >
+            {icon || <DefaultIcon fontSize="small" />}
           </Avatar>
         }
         title={title}
-        subheader="September 14, 2016"
+        subheader={releaseDate}
       />
-      <CardMedia component="img" height="194" image={img} alt="work sample" />
+      <CardMedia
+        component="img"
+        height="194"
+        image={img}
+        alt="work sample"
+        sx={{
+          transition: "transform 0.5s ease",
+          "&:hover": {
+            transform: "scale(1.05)",
+          },
+        }}
+      />
       <CardContent>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
           {description}

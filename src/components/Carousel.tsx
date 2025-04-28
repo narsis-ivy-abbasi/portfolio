@@ -1,7 +1,7 @@
 "use client";
-import { Box, IconButton, useTheme, useMediaQuery } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
-import { useRef, useState, useEffect, ReactNode } from "react";
+import { Box, IconButton, useMediaQuery, useTheme } from "@mui/material";
+import { ReactNode, useEffect, useRef, useState } from "react";
 
 interface CarouselProps {
   children: ReactNode[];

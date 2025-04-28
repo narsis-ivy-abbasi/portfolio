@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import WorkSample from "@/components/WorkSample";
 import WorkTimeline from "@/components/WorkTimeline";
 import { Box } from "@mui/material";
-import "./globals.css"
+import "./globals.css";
 
 export default function Home() {
   return (
@@ -19,7 +19,10 @@ export default function Home() {
       }}
     >
       <Header />
-      <Box component="main" sx={{ flexGrow: 1, py: 4, minWidth: 500,maxWidth:{ xs: 400, md: 800,lg:1500 },marginX:"auto" }}>
+      <Box
+        component="main"
+        sx={{ flexGrow: 1, py: 4, width: "100%", margin: "auto",minWidth:"300px" }}
+      >
         <AboutMe />
         <WorkSample />
         <WorkTimeline />

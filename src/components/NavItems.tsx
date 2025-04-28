@@ -8,12 +8,13 @@ import {
   Paper,
   Stack,
   Typography,
+  useTheme,
 } from "@mui/material";
 import { useEffect, useState } from "react";
 
 const NavItems = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const theme = useTheme();
   const navItems = [
     { label: "About", id: "about" },
     { label: "Samples", id: "samples" },
@@ -77,7 +78,10 @@ const NavItems = () => {
                 top: "100%",
                 left: 0,
                 marginTop: 1,
-                bgcolor: "rgba(255,255,255,0.1)",
+                bgcolor:
+                  theme.palette.mode === "light"
+                    ? "rgba(255, 255, 255, 1)"
+                    : "rgba(255,255,255,0.1)",
                 border: "1px solid rgba(255,255,255,0.2)",
                 boxShadow: 3,
                 backdropFilter: "blur(10px)",

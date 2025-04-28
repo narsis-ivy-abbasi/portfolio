@@ -6,7 +6,7 @@ import {
   TimelineItem,
   TimelineSeparator,
 } from "@mui/lab";
-import { Box, Paper, Typography, useTheme } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 
 interface WorkTimeLineItemProps {
   time: string;
@@ -23,7 +23,6 @@ const WorkTimeLineItem = ({
   index = 0,
 }: WorkTimeLineItemProps) => {
   const isLeft = index % 2 !== 0;
-  const theme = useTheme();
   return (
     <TimelineItem>
       <TimelineSeparator>
@@ -32,7 +31,6 @@ const WorkTimeLineItem = ({
       </TimelineSeparator>
       <TimelineContent
         sx={{
-          // px: 2,
           display: "flex",
           flexDirection: "column",
           alignItems: isLeft ? "flex-end" : "flex-start",
@@ -47,11 +45,31 @@ const WorkTimeLineItem = ({
             mb: 2,
           }}
         >
-          <Typography variant="h6" component="span">
+          <Typography
+            variant="h6"
+            component="span"
+            sx={{
+              fontSize: { xs: "1rem", md: "1.5rem" }, // smaller on mobile
+              fontWeight: "bold",
+            }}
+          >
             {time}
           </Typography>
-          <Typography>{companyName}</Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            sx={{
+              fontSize: { xs: "0.9rem", md: "1.2rem" },
+              fontWeight: "medium",
+            }}
+          >
+            {companyName}
+          </Typography>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{
+              fontSize: { xs: "0.8rem", md: "1rem" },
+            }}
+          >
             {jobTitle}
           </Typography>
         </Box>
@@ -62,11 +80,10 @@ const WorkTimeLineItem = ({
             sx={{
               p: 2,
               borderRadius: 2,
-              // backgroundColor:
-              //   theme.palette.mode === "dark" ? "inherit" : "#f5f5f5",
               maxWidth: "90%",
               textAlign: "left",
               transition: "transform 0.3s ease",
+              display: { xs: "none", md: "block" },
               "&:hover": {
                 transform: "translateY(-5px)",
               },
