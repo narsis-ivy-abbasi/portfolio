@@ -6,6 +6,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import WorkSample from "@/components/WorkSample";
 import WorkTimeline from "@/components/WorkTimeline";
 import { Box } from "@mui/material";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 
 export default function Home() {
@@ -30,6 +32,7 @@ export default function Home() {
         <ScrollToTop />
       </Box>
       <Footer />
+      <ToastContainer position="top-right" autoClose={3000} />
     </Box>
   );
 }

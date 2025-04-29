@@ -5,6 +5,8 @@ import TerrainIcon from "@mui/icons-material/Terrain";
 import ThunderstormIcon from "@mui/icons-material/Thunderstorm";
 import TrackChangesIcon from "@mui/icons-material/TrackChanges";
 import CalculateIcon from "@mui/icons-material/Calculate";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import MovieIcon from "@mui/icons-material/Movie";
 import { Box, Typography } from "@mui/material";
 import Carousel from "./Carousel";
 import WorkCard from "./WorkCard";
@@ -48,10 +50,10 @@ const workInfo = [
     srcUrl: "https://github.com/narsis-ivy-abbasi/dashboard",
     demoUrl: "https://habit-tracker-dashboard.netlify.app/",
     skillsInfo: [
-      { name: "", icon: "/icons/nextJs.svg" },
-      { name: "", icon: "/icons/materialUI.svg" },
       { name: "", icon: "/icons/react.svg" },
       { name: "", icon: "/icons/redux.svg" },
+      { name: "", icon: "/icons/nextJs.svg" },
+      { name: "", icon: "/icons/materialUI.svg" },
     ],
     releaseDate: "March, 2025",
     icon: <TrackChangesIcon fontSize="small" />,
@@ -99,6 +101,34 @@ const workInfo = [
     icon: <TerrainIcon fontSize="small" />,
   },
   {
+    title: "Youtube Clone",
+    description:
+      "A YouTube clone built with API integration for video browsing and playback.",
+    img: "/workSample/mock-youtube.png",
+    srcUrl: "https://github.com/narsis-ivy-abbasi/youtube-clone",
+    demoUrl: "https://wonderful-truffle-1ebb19.netlify.app/",
+    skillsInfo: [
+      { name: "", icon: "/icons/react.svg" },
+      { name: "", icon: "/icons/javascript.svg" },
+    ],
+    releaseDate: "December, 2024",
+    icon: <YouTubeIcon fontSize="small" />,
+  },
+  {
+    title: "Netflix Clone",
+    description:
+      "A Netflix clone for browsing and streaming movies using real-time API data.",
+    img: "/workSample/mock-netflix.png",
+    srcUrl: "https://github.com/narsis-ivy-abbasi/netflix",
+    demoUrl: "https://netfliix-cloneivy.netlify.app/",
+    skillsInfo: [
+      { name: "", icon: "/icons/react.svg" },
+      { name: "", icon: "/icons/javascript.svg" },
+    ],
+    releaseDate: "November, 2024",
+    icon: <MovieIcon fontSize="small" />,
+  },
+  {
     title: "Math",
     description:
       "A bilingual website with dark and light modes, connecting students to a private math teacher.",
@@ -106,10 +136,10 @@ const workInfo = [
     srcUrl: "https://github.com/narsis-ivy-abbasi/math",
     demoUrl: "https://math-zi-website.netlify.app/",
     skillsInfo: [
-      { name: "", icon: "/icons/nextJs.svg" },
-      { name: "", icon: "/icons/materialUI.svg" },
       { name: "", icon: "/icons/react.svg" },
       { name: "", icon: "/icons/redux.svg" },
+      { name: "", icon: "/icons/nextJs.svg" },
+      { name: "", icon: "/icons/materialUI.svg" },
     ],
     releaseDate: "December, 2024",
     icon: <CalculateIcon fontSize="small" />,
@@ -123,8 +153,8 @@ const WorkSample = () => {
         WorkSample
       </Typography>
       <Typography variant="body1" gutterBottom sx={{ mb: 2 }}>
-        A selection of recent projects is displayed in the section below. Click
-        on any card to explore the work and see it in action.
+        A selection of recent projects is shown below. Use the Demo button to
+        view the live site and the Source button to explore the code on GitHub.
       </Typography>
       <Carousel cardWidth={350} gap={20}>
         {workInfo.map((work, index) => (
