@@ -46,7 +46,7 @@ const AboutMe = () => {
         {/* TEXT CONTENT */}
         <Box sx={{ flex: 1 / 2 }}>
           <Typography variant="h3" gutterBottom>
-            About Me !
+            About Me
           </Typography>
           <Typography variant="h4" color="textDisabled" gutterBottom>
             Narges Abbasi
