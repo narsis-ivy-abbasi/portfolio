@@ -80,19 +80,6 @@ const ContactMe = () => {
           </Typography>
           <Box sx={{ mb: 2 }}>
             <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-              <LocalPhoneOutlinedIcon
-                sx={{
-                  mr: 1,
-                  transition: "transform 0.3s ease, filter 0.3s ease",
-                  "&:hover": {
-                    transform: "scale(1.2)",
-                    filter: "brightness(1.4)",
-                  },
-                }}
-              />
-              <Typography variant="body1">+98 (912) 433-2264</Typography>
-            </Box>
-            <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
               <PlaceOutlinedIcon
                 sx={{
                   mr: 1,
