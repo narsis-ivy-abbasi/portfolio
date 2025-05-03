@@ -31,7 +31,7 @@ const AboutMe = () => {
       id="about"
       sx={{
         py: { xs: 0, md: 10 },
-        my: 5, 
+        my: 5,
       }}
     >
       <Box
@@ -45,16 +45,20 @@ const AboutMe = () => {
       >
         {/* TEXT CONTENT */}
         <Box sx={{ flex: 1 / 2 }}>
-          <Typography variant="h3"  gutterBottom>
-            About Me
+          <Typography variant="h3" gutterBottom>
+            About Me !
           </Typography>
-          <Typography variant="h4" color="textDisabled"  gutterBottom>
+          <Typography variant="h4" color="textDisabled" gutterBottom>
             Narges Abbasi
           </Typography>
-          <Typography variant="h6" color="textSecondary"  gutterBottom>
+          <Typography variant="h6" color="textSecondary" gutterBottom>
             Frontend Developer
           </Typography>
-          <Typography variant="body1" sx={{ textAlign: "justify", paddingBottom: 5 }}  gutterBottom>
+          <Typography
+            variant="body1"
+            sx={{ textAlign: "justify", paddingBottom: 5 }}
+            gutterBottom
+          >
             Dynamic Front-End Developer with over 9 years of experience in
             building responsive and user-friendly web applications. Proficient
             in HTML, CSS, JavaScript, and modern libraries like React, as well
@@ -162,7 +166,7 @@ const AboutMe = () => {
               zIndex: 3,
               transition: "transform 0.4s ease",
               transformOrigin: "bottom center",
-              borderBottom:"1px solid #ffc0cb",
+              borderBottom: "1px solid #ffc0cb",
               "&:hover": {
                 transform: "scale(1.1)",
                 filter: "brightness(1.1)",
