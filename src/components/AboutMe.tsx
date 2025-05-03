@@ -107,7 +107,7 @@ const AboutMe = () => {
               width: 430,
               height: 400,
               position: "absolute",
-              left:  { xs: "35%", md: "50%" }  , // Center horizontally
+              left: { xs: "40%", md: "50%" }, // Center horizontally
               top: "65%", // Center vertically
               transform: "translate(-50%, -50%)", // Perfect centering
               zIndex: 0,
