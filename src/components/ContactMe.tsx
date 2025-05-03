@@ -182,14 +182,16 @@ const ContactMe = () => {
               <TextField
                 fullWidth
                 label="First Name"
-                {...register("firstName")}
+                {...register("firstName", {
+                  required: "First name is required",
+                })}
               />
             </Grid>
             <Grid size={{ xs: 6 }}>
               <TextField
                 fullWidth
                 label="Last Name"
-                {...register("lastName")}
+                {...register("lastName", { required: "Last name is required" })}
               />
             </Grid>
           </Grid>
@@ -199,7 +201,7 @@ const ContactMe = () => {
               fullWidth
               label="Email"
               type="email"
-              {...register("email")}
+              {...register("email", { required: "Email is required" })}
             />
           </Grid>
           <Grid size={{ xs: 6, md: 4, lg: 2 }}>
@@ -208,7 +210,7 @@ const ContactMe = () => {
               multiline
               rows={4}
               label="Message"
-              {...register("message")}
+              {...register("message", { required: "Message is required" })}
             />
           </Grid>
           <Button
