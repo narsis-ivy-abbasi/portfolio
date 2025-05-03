@@ -17,13 +17,20 @@ export default function Home() {
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
-        px: { xs: 5, md: 10 },
+        px: { xs: 2, md: 10 },
       }}
     >
       <Header />
       <Box
         component="main"
-        sx={{ flexGrow: 1, py: 4, width: "100%", margin: "auto",minWidth:"300px" ,maxWidth:"1200px"}}
+        sx={{
+          flexGrow: 1,
+          py: 4,
+          width: "100%",
+          margin: "auto",
+          minWidth: "300px",
+          maxWidth: "1200px",
+        }}
       >
         <AboutMe />
         <WorkSample />

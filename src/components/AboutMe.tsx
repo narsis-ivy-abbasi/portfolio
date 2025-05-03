@@ -79,13 +79,13 @@ const AboutMe = () => {
             mx: "auto",
           }}
         >
-          <Box
+          {/* <Box
             component="svg"
             viewBox="0 0 500 500"
             xmlns="http://www.w3.org/2000/svg"
             sx={{
-              width: 450,
-              height: 450,
+              width: 430,
+              height: 400,
               position: "absolute",
               left: "65%", // Center horizontally
               top: "55%", // Center vertically
@@ -98,16 +98,16 @@ const AboutMe = () => {
               fill="#6ec6ff"
               d="M150,200Q130,150,190,130Q220,70,290,100Q360,90,380,150Q440,170,430,230Q450,290,400,320Q370,380,300,360Q260,400,200,370Q150,350,130,300Q90,270,120,230Q150,200,150,200Z"
             />
-          </Box>
+          </Box> */}
           <Box
             component="svg"
             viewBox="0 0 500 500"
             xmlns="http://www.w3.org/2000/svg"
             sx={{
-              width: 450,
-              height: 450,
+              width: 430,
+              height: 400,
               position: "absolute",
-              left: "45%", // Center horizontally
+              left:  { xs: "35%", md: "50%" }  , // Center horizontally
               top: "65%", // Center vertically
               transform: "translate(-50%, -50%)", // Perfect centering
               zIndex: 0,

@@ -41,7 +41,7 @@ const WorkTimeLineItem = ({
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
-            width: "90%",
+            width: "100%",
             mb: 2,
           }}
         >
@@ -80,7 +80,7 @@ const WorkTimeLineItem = ({
             sx={{
               p: 2,
               borderRadius: 2,
-              maxWidth: "90%",
+              maxWidth: "100%",
               textAlign: "left",
               transition: "transform 0.3s ease",
               display: { xs: "none", md: "block" },
