@@ -59,7 +59,7 @@ const Header = () => {
 
           <NavItems />
           {/* Download CV button */}
-          <a href="/cv/NargesAbbasi.pdf" download style={{ textDecoration: "none" }} title="Download C">
+          <a href="/cv/NargesAbbasi.pdf" download style={{ textDecoration: "none" }} title="Download CV">
             <IconButton sx={{color: theme.palette.mode === "dark"? "white" :"black"}}>
               <DownloadIcon />
             </IconButton>
