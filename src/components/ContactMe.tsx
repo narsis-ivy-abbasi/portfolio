@@ -26,7 +26,12 @@ interface FormData {
   message: string;
 }
 const ContactMe = () => {
-  const { register, handleSubmit, reset } = useForm<FormData>();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormData>();
   const [isSending, setIsSending] = useState(false);
 
   const sendEmail = async (data: FormData) => {
@@ -185,6 +190,8 @@ const ContactMe = () => {
                 {...register("firstName", {
                   required: "First name is required",
                 })}
+                error={!!errors.firstName}
+                helperText={errors.firstName?.message}
               />
             </Grid>
             <Grid size={{ xs: 6 }}>
@@ -192,6 +199,8 @@ const ContactMe = () => {
                 fullWidth
                 label="Last Name"
                 {...register("lastName", { required: "Last name is required" })}
+                error={!!errors.lastName}
+                helperText={errors.lastName?.message}
               />
             </Grid>
           </Grid>
@@ -202,6 +211,8 @@ const ContactMe = () => {
               label="Email"
               type="email"
               {...register("email", { required: "Email is required" })}
+              error={!!errors.email}
+              helperText={errors.email?.message}
             />
           </Grid>
           <Grid size={{ xs: 6, md: 4, lg: 2 }}>
@@ -211,6 +222,8 @@ const ContactMe = () => {
               rows={4}
               label="Message"
               {...register("message", { required: "Message is required" })}
+              error={!!errors.message}
+              helperText={errors.message?.message}
             />
           </Grid>
           <Button
