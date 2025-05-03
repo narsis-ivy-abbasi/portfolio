@@ -23,7 +23,7 @@ export default function Home() {
       <Header />
       <Box
         component="main"
-        sx={{ flexGrow: 1, py: 4, width: "100%", margin: "auto",minWidth:"300px" }}
+        sx={{ flexGrow: 1, py: 4, width: "100%", margin: "auto",minWidth:"300px" ,maxWidth:"1200px"}}
       >
         <AboutMe />
         <WorkSample />
