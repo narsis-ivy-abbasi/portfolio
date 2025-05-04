@@ -7,8 +7,8 @@ const WorkTimeline = () => {
   const historyWork = [
     {
       time: "May 2024 - Current",
-      companyName: "Self-employed(Remote)",
-      jobTitle: "Front-end Developer",
+      companyName: "Self-employed",
+      jobTitle: "Front-end | React Developer",
       details: [
         "Independently designed and developed responsive websites using HTML, CSS, JavaScript, and React with TypeScript, incorporating Redux for state management",
         "Built user-friendly interfaces focused on performance, accessibility, and clean UI/UX",
@@ -18,7 +18,7 @@ const WorkTimeline = () => {
     {
       time: "Aug 2018 - Jul 2024",
       companyName: "Soubar engineering Company",
-      jobTitle: "Front-end Developer",
+      jobTitle: "Senior Front-end Developer",
       details: [
         "Played a key role in front-end development within a 5-member team, delivering a stable product over 5 years with a 95% quality rating.",
         "Built responsive, accessible UIs using HTML5, CSS3, Bootstrap, React, and TypeScript, improving development efficiency by 20%.",

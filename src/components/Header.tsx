@@ -1,17 +1,9 @@
 "use client";
 
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import DownloadIcon from "@mui/icons-material/Download";
-import {
-  AppBar,
-  Box,
-  IconButton,
-  Toolbar,
-  Typography,
-  useTheme,
-} from "@mui/material";
-import Image from "next/image";
+import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
+import { AppBar, Box, IconButton, Toolbar, useTheme } from "@mui/material";
 import { useColorMode } from "../app/context/ThemeContext";
 import NavItems from "./NavItems";
 
@@ -37,41 +29,39 @@ const Header = () => {
         <Toolbar>
           <Box
             sx={{
-              display: { xs: "none", md: "flex" },
+              display: "flex",
               flexDirection: "row",
+              justifyContent: { xs: "start", md: "end" },
               flexGrow: 1,
               gap: 1,
               alignItems: "center",
             }}
           >
-            <Image
-              src="/frontEnd.png"
-              alt="portfolio icon"
-              height={50}
-              width={30}
-              style={{ objectFit: "contain" }}
-            />
+            <NavItems />
+            {/* Download CV button */}
+            <a
+              href="/cv/NargesAbbasi.pdf"
+              download
+              style={{ textDecoration: "none" }}
+              title="Download CV"
+            >
+              <IconButton
+                sx={{
+                  color: theme.palette.mode === "dark" ? "white" : "black",
+                }}
+              >
+                <DownloadIcon />
+              </IconButton>
+            </a>
 
-            <Typography variant="h6" component="div">
-              Portfolio
-            </Typography>
-          </Box>
-
-          <NavItems />
-          {/* Download CV button */}
-          <a href="/cv/NargesAbbasi.pdf" download style={{ textDecoration: "none" }} title="Download CV">
-            <IconButton sx={{color: theme.palette.mode === "dark"? "white" :"black"}}>
-              <DownloadIcon />
+            <IconButton onClick={colorMode.toggleColorMode} color="inherit">
+              {theme.palette.mode === "dark" ? (
+                <WbSunnyOutlinedIcon />
+              ) : (
+                <DarkModeOutlinedIcon />
+              )}
             </IconButton>
-          </a>
-
-          <IconButton onClick={colorMode.toggleColorMode} color="inherit">
-            {theme.palette.mode === "dark" ? (
-              <WbSunnyOutlinedIcon />
-            ) : (
-              <DarkModeOutlinedIcon />
-            )}
-          </IconButton>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
