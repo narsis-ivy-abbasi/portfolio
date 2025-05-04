@@ -9,6 +9,7 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Skills from "./Skills";
+import { Box } from "@mui/material";
 
 interface skill {
   name?: string;
@@ -38,8 +39,9 @@ const WorkCard = ({
   return (
     <Card
       sx={{
-        maxWidth: 345,
-        mb: 1,
+        display: "flex",
+        flexDirection: "column",
+        height: "100%", // full height of its parent
       }}
     >
       <CardHeader
@@ -66,7 +68,7 @@ const WorkCard = ({
           },
         }}
       />
-      <CardContent>
+      <CardContent sx={{ flexGrow: 1 }}>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
           {description}
         </Typography>

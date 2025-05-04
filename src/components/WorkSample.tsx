@@ -43,9 +43,9 @@ const workInfo = [
     icon: <ShoppingBagIcon fontSize="small" />,
   },
   {
-    title: "Habit Tracker Dashboard",
+    title: "Habit Tracker",
     description:
-      "A website for tracking habits and following personal plans to build better routines.",
+      "A dashboard for tracking habits and following personal plans to build better routines.",
     img: "/workSample/mock-habit-tracker.png",
     srcUrl: "https://github.com/narsis-ivy-abbasi/dashboard",
     demoUrl: "https://habit-tracker-dashboard.netlify.app/",
