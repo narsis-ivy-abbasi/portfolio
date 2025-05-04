@@ -17,7 +17,7 @@ const workInfo = [
     description: "A website for booking hotels and exploring vacation tours.",
     img: "/workSample/mock-trip.png",
     srcUrl: "https://github.com/narsis-ivy-abbasi/trip-reservation",
-    demoUrl: "https://amazing-marzipan-4800f9.netlify.app/",
+    demoUrl: "https://the-trip-reservation.netlify.app/",
     skillsInfo: [
       { name: "", icon: "/icons/typescript.svg" },
       { name: "", icon: "/icons/react.svg" },
