@@ -1,12 +1,12 @@
+import CalculateIcon from "@mui/icons-material/Calculate";
 import ExploreIcon from "@mui/icons-material/Explore";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import MovieIcon from "@mui/icons-material/Movie";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import TerrainIcon from "@mui/icons-material/Terrain";
 import ThunderstormIcon from "@mui/icons-material/Thunderstorm";
 import TrackChangesIcon from "@mui/icons-material/TrackChanges";
-import CalculateIcon from "@mui/icons-material/Calculate";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import MovieIcon from "@mui/icons-material/Movie";
 import { Box, Typography } from "@mui/material";
 import Carousel from "./Carousel";
 import WorkCard from "./WorkCard";

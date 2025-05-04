@@ -9,7 +9,6 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Skills from "./Skills";
-import { Box } from "@mui/material";
 
 interface skill {
   name?: string;
