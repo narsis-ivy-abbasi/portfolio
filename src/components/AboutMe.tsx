@@ -59,11 +59,16 @@ const AboutMe = () => {
             sx={{ textAlign: "justify", paddingBottom: 5 }}
             gutterBottom
           >
-            Dynamic Front-End Developer with over 9 years of experience in
-            building responsive and user-friendly web applications. Proficient
-            in HTML, CSS, JavaScript, and modern libraries like React, as well
-            as frameworks like Node.js. Committed to delivering high-quality
-            digital experiences that enhance user engagement.
+            Front-End Developer with 9+ years of experience building
+            high-performance, responsive, and user-centric web applications.
+            Proficient in HTML, CSS, JavaScript, TypeScript, React, and Next.js,
+            with hands-on expertise in UI/UX design, testing (TDD), and
+            performance optimization. Proven track record of improving
+            development efficiency by 20% and enhancing user engagement by 30%.
+            Passionate about creating scalable digital experiences and
+            collaborating in cross-functional teams to bring intuitive
+            interfaces to life. Currently focused on delivering impactful
+            front-end solutions in modern, fast-paced environments.
           </Typography>
           <Skills skillsInfo={skillsInfo} iconSize={50} />
         </Box>
