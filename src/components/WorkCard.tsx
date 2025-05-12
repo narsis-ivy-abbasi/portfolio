@@ -13,6 +13,7 @@ import Skills from "./Skills";
 interface skill {
   name?: string;
   icon: string;
+  isShow: boolean;
 }
 
 interface WorkCardProps {
