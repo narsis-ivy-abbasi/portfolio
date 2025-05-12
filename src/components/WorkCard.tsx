@@ -76,11 +76,29 @@ const WorkCard = ({
         <Skills skillsInfo={skillsInfo} iconSize={30} />
       </CardActions>
 
-      <CardActions>
-        <Button size="small" component="a" href={srcUrl} target="_blank">
+      <CardActions sx={{ justifyContent: "flex-end" }}>
+        <Button
+          size="small"
+          component="a"
+          href={srcUrl}
+          target="_blank"
+          style={{
+            border: "1px solid",
+            borderColor: "currentColor",
+            color: "inherit",
+            textTransform: "none",
+          }}
+        >
           Source
         </Button>
-        <Button size="small" component="a" href={demoUrl} target="_blank">
+        <Button
+          size="small"
+          component="a"
+          href={demoUrl}
+          target="_blank"
+          variant="contained"
+          color="primary"
+        >
           Demo
         </Button>
       </CardActions>

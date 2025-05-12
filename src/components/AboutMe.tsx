@@ -48,12 +48,21 @@ const AboutMe = () => {
           <Typography variant="h3" gutterBottom>
             About Me
           </Typography>
-          <Typography variant="h4" color="textDisabled" gutterBottom>
+          <Typography
+            variant="h4"
+            color="textDisabled"
+            gutterBottom
+            style={{ display: "flex", alignItems: "baseline" }}
+          >
             Narges Abbasi
+            <Typography
+              component="span"
+              style={{ fontSize: "0.60em", marginLeft: "8px" }}
+            >
+              (Front-end Developer)
+            </Typography>
           </Typography>
-          <Typography variant="h6" color="textSecondary" gutterBottom>
-            Frontend Developer
-          </Typography>
+
           <Typography
             variant="body1"
             sx={{ textAlign: "justify", paddingBottom: 5 }}
