@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Tooltip, Typography } from "@mui/material";
 
 interface skill {
   name?: string;
   icon: string;
+  isShow: boolean;
 }
 
 interface skillProps {
@@ -31,23 +32,26 @@ const Skills = ({ skillsInfo, iconSize }: skillProps) => {
             alignItems: "center",
             textAlign: "center",
             width: iconSize + 10,
-            transition: "transform 0.3s ease",  
+            transition: "transform 0.3s ease",
             "&:hover img": {
-              transform: "translateY(-5px)",  
+              transform: "translateY(-5px)",
               filter: "brightness(1.5)",
             },
           }}
         >
-          <Box
-            component="img"
-            src={skill.icon}
-            alt={skill.name ?? "Skill Icon"}
-            sx={{
-              width: iconSize,
-              height: iconSize,transition: "transform 0.3s ease",
-            }}
-          />
-          {skill.name && (
+          <Tooltip title={skill.isShow ? '': skill.name}>
+            <Box
+              component="img"
+              src={skill.icon}
+              alt={skill.name ?? "Skill Icon"}
+              sx={{
+                width: iconSize,
+                height: iconSize,
+                transition: "transform 0.3s ease",
+              }}
+            />
+          </Tooltip>
+          {skill.isShow && (
             <Typography
               sx={{
                 fontSize: {
