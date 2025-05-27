@@ -2,7 +2,6 @@
 
 import React from "react";
 import { ThemeRegistry } from "./context/ThemeContext";
-import Hotjar from "@/components/Hotjar";
 
 export default function RootLayout({
   children,
@@ -12,9 +11,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header>
-          <Hotjar />
-        </header>
         <ThemeRegistry>{children}</ThemeRegistry>
       </body>
     </html>
