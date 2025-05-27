@@ -12,8 +12,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <header>
+          <Hotjar />
+        </header>
         <ThemeRegistry>{children}</ThemeRegistry>
-        <Hotjar />
       </body>
     </html>
   );
